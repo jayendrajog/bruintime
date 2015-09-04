@@ -23,6 +23,7 @@ body {
   z-index: 1;
   position: relative;
   text-align: center;
+  pointer-events: none;
 }
 
 #Subtitle{
@@ -35,13 +36,26 @@ body {
 h1{
   position: relative;
   padding-top: 10%;
-  font: 2000% "Title Font", Arial, Helvetica;
+  font: 500% "Title Font", Arial, Helvetica;
+  pointer-events: none;
+
+}
+
+h2{
+  font-size: 150%;
+}
+
+.row h2 {
+  text-align: center;
+  font: 500% "Proxima Nova", Arial, Helvetica;
+
 }
 
 
 #displayName{
 	color: black;
 	text-align: left;
+  font-size: 100%;
 }
 
 .navbar{
@@ -93,7 +107,16 @@ html, body, .container-fluid, .row {
 	.chartDisplay{
 	padding-top: 2%;
 	padding-left: 5%;
+  font-size: 500%;
 	}
+
+  h2{
+    font-size: 250%;
+  }
+
+  #displayName{
+    font-size: 30%;
+  }
 }
 
 @media (min-width: 750px){
@@ -103,7 +126,41 @@ html, body, .container-fluid, .row {
 	padding-left: 30%;
 	}
 
+  h1{
+    font-size: 1000%;
+  }
+  #displayName{
+    font-size: 40%;
+  }
+
 }
+
+
+@media (min-width: 700px) and (max-width: 991px){
+  .navbar{
+    width: 100%;
+  }
+  .navbar-collapse.collapse {
+        display: none !important;
+    }
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+    .navbar-header .collapse, .navbar-toggle {
+        display:block !important;
+    }
+    .navbar-header {
+        float:none;
+    }
+    .h1{
+      font-size: 1000%;
+
+    }
+    #displayName{
+       font-size: 50%;
+    }
+}
+
 
 @media (min-width: 992px) {
   .sidebar{
@@ -117,24 +174,19 @@ html, body, .container-fluid, .row {
     padding-left: 5%
     background-color: #CCCCCC;
   }
-}
 
-@media (min-width: 700px) and (max-width: 991px){
-	.navbar{
-		width: 100%;
-	}
-	.navbar-collapse.collapse {
-        display: none !important;
-    }
-    .navbar-collapse.collapse.in {
-        display: block !important;
-    }
-    .navbar-header .collapse, .navbar-toggle {
-        display:block !important;
-    }
-    .navbar-header {
-        float:none;
-    }
+  h1{
+    font-size: 2000%;
+  }
+
+  h2{
+    font-size: 400%;
+  }
+
+  #displayName{
+    font-size: 60%;
+  }
+
 }
 
 
@@ -163,17 +215,12 @@ canvas{
   background-position: 50% 50%;
   background-repeat: no-repeat;
   z-index: 0;
+  pointer-events:auto;
 }
 
 .aboutText{
   background-color: white;
   height: 100%;
-}
-
-.row h2 {
-  text-align: center;
-  font: 500% "Proxima Nova", Arial, Helvetica;
-
 }
 
 .col-md-4{
