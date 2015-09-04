@@ -1,0 +1,181 @@
+
+/* Navigation bar padding */
+body {
+  /*	min_height: 70px; */
+  	width: 100%;
+  	height: 100%;
+  	margin:0px;
+  	background-color: #3284BF;
+}
+
+@font-face{
+  font-family: "Title Font";
+  src: url('fonts/TitleFont.otf') format('opentype');
+}
+
+@font-face{
+  font-family: "Proxima Nova";
+  src: url('fonts/ProximaNova.otf') format('opentype');
+}
+
+
+.theBody{
+  z-index: 1;
+  position: relative;
+  text-align: center;
+}
+
+#Subtitle{
+  font-family: "Proxima Nova", Arial, Helvetica;
+  z-index: 2;
+  position: relative;
+  text-align:center;
+}
+
+h1{
+  position: relative;
+  padding-top: 10%;
+  font: 2000% "Title Font", Arial, Helvetica;
+}
+
+
+#displayName{
+	color: black;
+	text-align: left;
+}
+
+.navbar{
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+#selectionBar{
+	margin-top: 0;
+	padding-left: 5%;
+}
+
+#myChart{
+	background-color: white;
+	padding: 10px;
+}
+
+.navbar-search{
+	vertical-align: middle;
+}
+
+
+/* Body */
+#indexBackground{
+	background-color: gray;
+}
+
+
+html, body, .container-fluid, .row {
+    height: 100%;
+}
+
+.sidebar {
+  background-color: #CCCCCC;
+}
+
+#class{
+	padding-top: 1%;
+}
+
+
+.chartDisplay{
+	padding-top: 2%;
+	padding-left: 5px;
+	}
+
+@media (min-width: 500px){
+	/* Chart */
+	.chartDisplay{
+	padding-top: 2%;
+	padding-left: 5%;
+	}
+}
+
+@media (min-width: 750px){
+	/* Chart */
+	.chartDisplay{
+	padding-top: 2%;
+	padding-left: 30%;
+	}
+
+}
+
+@media (min-width: 992px) {
+  .sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    display: block;
+    padding-top: 5%;
+    padding-left: 5%
+    background-color: #CCCCCC;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 991px){
+	.navbar{
+		width: 100%;
+	}
+	.navbar-collapse.collapse {
+        display: none !important;
+    }
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+    .navbar-header .collapse, .navbar-toggle {
+        display:block !important;
+    }
+    .navbar-header {
+        float:none;
+    }
+}
+
+
+
+/* ---- base ---- */
+
+html{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+canvas{
+  display:block;
+  vertical-align:bottom;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js{
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #3284BF;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.aboutText{
+  background-color: white;
+  height: 100%;
+}
+
+.row h2 {
+  text-align: center;
+  font: 500% "Proxima Nova", Arial, Helvetica;
+
+}
+
+.col-md-4{
+  text-align: center;
+}

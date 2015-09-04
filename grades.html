@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BruinTime</title>
+	<!--Bootstrap -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="selectBar/dist/css/bootstrap-select.css">
+ 
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="selectBar/dist/js/bootstrap-select.js"></script>
+    <!-- My custom css -->
+    <link rel = "stylesheet" href = "formatting.css">
+    
+    
+
+</head>
+
+<body>
+       <!-- Navigation -->
+        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="active">
+                            <a href="grades.html">Grades</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </div>
+
+       <div class="navbar navbar-default col-md-3 sidebar" role = "navigation">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#sidebar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div id = "sidebar" class="collapse navbar-collapse">  
+                  <ul class="nav nav-sidebar">
+   
+                    <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                      <div class="col-lg-10">
+                        <select id="subject" class="selectpicker show-tick form-control" data-live-search="true" title="Subject">
+
+                        </select>
+                      </div>
+                    </div>
+                  </form>
+                  <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                      <div class="col-lg-10">
+                        <select id="class" class="selectpicker show-tick form-control" data-live-search="true" title ="Class">
+
+                        </select>
+                      </div>
+                    </div>
+                  </form>
+                  <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                      <div class="col-lg-10">
+                        <select id="professor" class="selectpicker show-tick form-control" data-live-search="true" title="Professor">
+ 
+                        </select>
+                      </div>
+                    </div>
+                  </form>
+                  <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                      <div class="col-lg-10">
+                        <select id="quarter" class="selectpicker show-tick form-control" data-live-search="true" title="Quarter">
+      
+                        </select>
+                      </div>
+                    </div>
+                  </form>
+                  </ul>   
+                </div>  
+            </div>       
+        </div>
+
+
+        <div class = "chartDisplay">
+                <h2 id="displayName">BruinTime. Course Managment. Simplified.</h2>
+        		<canvas id="myChart"></canvas>
+        </div>
+
+
+	<!-- Chart JS Script -->
+	<script src="Chart.js/Chart.min.js"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+<!-- My custom javascript -->
+    <script src="theScript.js"></script>
+    
+</body>
+</html>
