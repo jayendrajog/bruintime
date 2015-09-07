@@ -6,6 +6,8 @@ body {
   	min-height: 100%;
   	margin:0px;
   	background-color: #3284BF;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 @font-face{
@@ -56,11 +58,16 @@ h2{
 	color: black;
 	text-align: left;
   font-size: 100%;
+  padding-left: 2%;
 }
 
 .navbar{
 	padding-bottom: 0;
 	margin-bottom: 0;
+}
+
+.navbar-inverse{
+  width: 100%;
 }
 
 #selectionBar{
@@ -116,6 +123,11 @@ html, body, .container-fluid, .row {
 
   #displayName{
     font-size: 30%;
+    padding-left: 0%;
+  }
+
+  body{
+     overflow-y: hidden;
   }
 }
 
@@ -132,6 +144,7 @@ html, body, .container-fluid, .row {
   #displayName{
     font-size: 40%;
   }
+
 
 }
 
@@ -184,7 +197,8 @@ html, body, .container-fluid, .row {
   }
 
   #displayName{
-    font-size: 60%;
+    font-size: 50%;
+
   }
 
 }
@@ -220,12 +234,18 @@ canvas{
 
 .aboutText{
   background-color: white;
-  height: 100vh;
+  height: 120%;
   padding-top: 5%;
 }
 
 .col-md-4{
   text-align: center;
+}
+
+.col-md-4 p{
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: left;
 }
 
 .footer {
