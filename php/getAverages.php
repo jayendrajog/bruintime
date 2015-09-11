@@ -10,21 +10,20 @@
 	$result = $connection->query($query);
 	if(!$result) die ($connection_error);
 
-
 	$numrows = $result->num_rows;
 	/* Array to hold the average GPAs for every major */
 	$avg_grades = array();
 	/* Array to hold average GPAs for every class*/
 	$cur_grades = array();
 	$curSubject = ""; 
-	for($j = 0; $j < $numrows; ++$j)
+	for($j = 0; $j < $numrows; $j++)
 	{
 		$result->data_seek($j);
 		$row = $result->fetch_array(MYSQLI_ASSOC);
 		/* if the subject changes*/
-		if($row['Subject'] != $curSubject)
+		if(($row['Subject'] != $curSubject) && $j != 0 )
 		{
-			$avg_grades[(array_sum($cur_grades)/count($cur_grades))] =  $curSubject;
+			$avg_grades[$curSubject] = (array_sum($cur_grades)/count($cur_grades));
 			unset($cur_grades);
 			$cur_grades = array();
 			$curSubject = $row['Subject'];
@@ -45,19 +44,18 @@
 							  $row['Dplus']*1.3 +
 							  $row['D']*1 +
 							  $row['Dminus']*0.7;
+						
 		$cur_grades[] = ($total_grade_points/$total_students);
 	}
 
 	asort($avg_grades);
 	$tabledata = '';
-	foreach ($avg_grades as $GPA => $major)
+	foreach ($avg_grades as $major => $GPA)
 	{
-		$tabledata .= '<tr><td>' . $GPA  . '</td> <td>' . $major . '</td></tr>';
+		echo '<tr><td>' . $major  . '</td><td>' . $GPA . '</td></tr>';
 	}
 
 	$result->close();
 	$connection->close();
-
-	echo $tabledata;
 
 ?>

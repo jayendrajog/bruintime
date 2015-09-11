@@ -23,7 +23,6 @@ $(document).ready(function() {
 	$('#class').selectpicker('hide');
 	$('#professor').selectpicker('hide');
 	$('#quarter').selectpicker('hide');
-
 	$.post("php/getSubjects.php",
 	    function (data) 
         {

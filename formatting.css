@@ -7,7 +7,6 @@ body {
   	margin:0px;
   	background-color: #3284BF;
     overflow-x: hidden;
-    overflow-y: scroll;
 }
 
 @font-face{
@@ -144,7 +143,9 @@ html, body, .container-fluid, .row {
   #displayName{
     font-size: 40%;
   }
-
+ body{
+     overflow-y: scroll;
+  }
 
 }
 
@@ -234,8 +235,35 @@ canvas{
 
 .aboutText{
   background-color: white;
-  height: 120%;
   padding-top: 5%;
+  height: 130%;
+}
+
+.analysisText{
+  background-color: white;
+  padding-top: 3%;
+}
+
+.table-striped{
+   width: 90%;
+   margin-left: 5%;
+}
+
+.analysisText h3{
+  text-align: center;
+  font-size: 300%;
+}
+
+.analysisText h4{
+  text-align: center;
+}
+
+@media(min-width: 992px)
+{
+  .analysisText{
+    padding-top: 0px;
+  }
+  
 }
 
 .col-md-4{
