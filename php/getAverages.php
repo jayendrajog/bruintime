@@ -23,7 +23,7 @@
 		/* if the subject changes*/
 		if(($row['Subject'] != $curSubject) && $j != 0 )
 		{
-			$avg_grades[$curSubject] = (array_sum($cur_grades)/count($cur_grades));
+			$avg_grades[$curSubject] = number_format((array_sum($cur_grades)/count($cur_grades)), 3, '.', '');
 			unset($cur_grades);
 			$cur_grades = array();
 			$curSubject = $row['Subject'];
@@ -48,7 +48,7 @@
 		$cur_grades[] = ($total_grade_points/$total_students);
 	}
 
-	asort($avg_grades);
+	arsort($avg_grades);
 	$tabledata = '';
 	foreach ($avg_grades as $major => $GPA)
 	{
