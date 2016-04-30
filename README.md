@@ -2,7 +2,7 @@
 UCLA Course Managment. Simplified. 
 =======================================
 =======================================
-
+     
 bruintime.com
 
 Update 9-11-15: Analysis page is now functional; it displays average grade for classes from
